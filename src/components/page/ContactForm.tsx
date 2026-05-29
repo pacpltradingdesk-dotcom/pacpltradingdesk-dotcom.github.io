@@ -59,7 +59,7 @@ export function ContactForm() {
   }
 
   const inputCls =
-    "w-full rounded-xl border border-[var(--color-line)] bg-[var(--color-base)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors placeholder:text-[var(--color-faint)] focus:border-[var(--color-amber)]";
+    "w-full rounded-xl border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-3 text-sm text-[var(--color-ink)] outline-none transition-colors placeholder:text-[var(--color-faint)] focus:border-[var(--color-amber)]";
 
   return (
     <form onSubmit={submit} className="glass rounded-3xl p-7 sm:p-9">
@@ -80,7 +80,7 @@ export function ContactForm() {
           <label className="mb-1.5 block text-xs uppercase tracking-wider text-[var(--color-faint)]">Interested in</label>
           <select className={inputCls} value={form.interest} onChange={(e) => set("interest", e.target.value)}>
             {interests.map((i) => (
-              <option key={i} value={i} className="bg-[var(--color-base)]">
+              <option key={i} value={i} className="bg-[var(--color-surface)]">
                 {i}
               </option>
             ))}

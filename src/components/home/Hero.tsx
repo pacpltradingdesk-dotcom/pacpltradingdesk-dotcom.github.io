@@ -46,7 +46,7 @@ export function Hero() {
           variants={reveal}
           initial="hidden"
           animate="show"
-          className="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-[var(--color-base)]/60 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-[var(--color-muted)] backdrop-blur"
+          className="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-[var(--color-surface)]/60 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-[var(--color-muted)] backdrop-blur"
         >
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--color-amber)]" />
           {company.legal} · {company.short}

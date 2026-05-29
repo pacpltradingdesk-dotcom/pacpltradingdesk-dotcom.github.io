@@ -91,7 +91,7 @@ export default function BioBitumenPage() {
       </section>
 
       {/* Process */}
-      <section className="border-y border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-y border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x">
           <SectionHeading
             eyebrow="The 4-Stage Process"
@@ -133,7 +133,7 @@ export default function BioBitumenPage() {
       </section>
 
       {/* Opportunity strip */}
-      <section className="border-t border-[var(--color-line)] bg-[var(--color-base)] py-20">
+      <section className="border-t border-[var(--color-line)] bg-[var(--color-surface)] py-20">
         <div className="maxw container-x">
           <SectionHeading eyebrow="Why Now" title="A market created in January 2026." align="center" />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

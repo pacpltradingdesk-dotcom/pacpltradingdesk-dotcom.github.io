@@ -94,7 +94,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Report library */}
-      <section className="border-t border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-t border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x grid gap-10 lg:grid-cols-[1fr_1.3fr]">
           <SectionHeading
             eyebrow="Bankable Report Library"

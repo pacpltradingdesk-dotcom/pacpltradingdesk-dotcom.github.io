@@ -7,7 +7,7 @@
 @theme {
   /* Surfaces */
   --color-void: oklch(11% 0.005 260);
-  --color-base: oklch(14% 0.008 260);
+  --color-surface: oklch(14% 0.008 260);
   --color-raised: oklch(18% 0.01 260);
   --color-line: oklch(28% 0.012 260);
 

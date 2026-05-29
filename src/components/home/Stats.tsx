@@ -4,7 +4,7 @@ import { stats } from "@/lib/site";
 
 export function Stats() {
   return (
-    <section className="relative border-y border-[var(--color-line)] bg-[var(--color-base)] py-20">
+    <section className="relative border-y border-[var(--color-line)] bg-[var(--color-surface)] py-20">
       <div className="maxw container-x grid grid-cols-2 gap-y-12 lg:grid-cols-4">
         {stats.map((s, i) => (
           <Reveal key={s.label} index={i} className="text-center lg:text-left">

@@ -42,19 +42,19 @@ export default function ITSoftwarePage() {
                 <Badge accent="cyan">Live · AI Sales Dashboard</Badge>
               </div>
               <div className="grid gap-5 lg:grid-cols-3">
-                <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-base)] p-5">
+                <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-5">
                   <div className="text-xs uppercase tracking-wider text-[var(--color-faint)]">VG-30 Landed</div>
                   <div className="mt-2 font-display text-3xl font-bold">₹48,250</div>
                   <div className="text-xs text-[var(--color-cyan)]">▲ 2.4% · 24-mo AI forecast</div>
                   <LineChart seed={5} accent="cyan" height={90} className="mt-4 h-20 w-full" />
                 </div>
-                <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-base)] p-5">
+                <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-5">
                   <div className="text-xs uppercase tracking-wider text-[var(--color-faint)]">Market Signal</div>
                   <div className="mt-2 font-display text-3xl font-bold text-gradient">7.8/10</div>
                   <div className="text-xs text-[var(--color-muted)]">10-signal composite · Brent · USD-INR</div>
                   <LineChart seed={9} accent="amber" height={90} className="mt-4 h-20 w-full" />
                 </div>
-                <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-base)] p-5">
+                <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-5">
                   <div className="text-xs uppercase tracking-wider text-[var(--color-faint)]">Pipeline</div>
                   <div className="mt-4 space-y-3">
                     {[["HOT", 64], ["WARM", 38], ["COLD", 22]].map(([k, v]) => (
@@ -80,7 +80,7 @@ export default function ITSoftwarePage() {
       </section>
 
       {/* Product grid */}
-      <section className="border-t border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-t border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x">
           <SectionHeading
             eyebrow="The Product Suite"

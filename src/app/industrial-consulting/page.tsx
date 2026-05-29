@@ -46,7 +46,7 @@ export default function IndustrialConsultingPage() {
       </section>
 
       {/* Product plants */}
-      <section className="border-y border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-y border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x">
           <SectionHeading eyebrow="Bitumen Product Plants" title="Five proven product lines." />
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -83,7 +83,7 @@ export default function IndustrialConsultingPage() {
           <div className="mt-12 grid gap-4">
             {clientTypes.map((c, i) => (
               <Reveal key={c.t} index={Math.min(i, 3)}>
-                <div className="group flex flex-col gap-2 rounded-2xl border border-[var(--color-line)] p-6 transition-colors hover:bg-[var(--color-base)] sm:flex-row sm:items-center sm:justify-between">
+                <div className="group flex flex-col gap-2 rounded-2xl border border-[var(--color-line)] p-6 transition-colors hover:bg-[var(--color-surface)] sm:flex-row sm:items-center sm:justify-between">
                   <div className="sm:max-w-2xl">
                     <h3 className="font-display text-lg font-semibold">{c.t}</h3>
                     <p className="mt-1 text-sm text-[var(--color-muted)]">{c.d}</p>
@@ -99,7 +99,7 @@ export default function IndustrialConsultingPage() {
       </section>
 
       {/* Fees */}
-      <section className="border-t border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-t border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x grid items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
           <SectionHeading eyebrow="Consulting Fees" title="Transparent, scope-based pricing." />
           <div className="overflow-hidden rounded-3xl border border-[var(--color-line)]">

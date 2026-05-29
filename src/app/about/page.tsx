@@ -46,7 +46,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder + career */}
-      <section className="border-y border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-y border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
             <div>

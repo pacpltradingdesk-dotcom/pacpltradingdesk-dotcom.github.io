@@ -35,7 +35,7 @@ export default function CapitalMarketPage() {
       />
 
       {/* Ticker */}
-      <div className="border-y border-[var(--color-line)] bg-[var(--color-base)] py-3">
+      <div className="border-y border-[var(--color-line)] bg-[var(--color-surface)] py-3">
         <Marquee duration={26} className="text-sm font-display tracking-wide text-[var(--color-muted)]">
           {ticker.map((t) => (
             <span key={t} className="px-6">
@@ -73,7 +73,7 @@ export default function CapitalMarketPage() {
             <div className="mt-8 grid gap-4">
               {fundStages.map((s, i) => (
                 <Reveal key={s.t} index={i}>
-                  <div className="rounded-2xl border border-[var(--color-line)] p-5 transition-colors hover:bg-[var(--color-base)]">
+                  <div className="rounded-2xl border border-[var(--color-line)] p-5 transition-colors hover:bg-[var(--color-surface)]">
                     <h3 className="font-display text-lg font-semibold">{s.t}</h3>
                     <p className="mt-1 text-sm text-[var(--color-muted)]">{s.d}</p>
                   </div>
@@ -85,7 +85,7 @@ export default function CapitalMarketPage() {
       </section>
 
       {/* Loans table */}
-      <section className="border-y border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-y border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x">
           <SectionHeading
             eyebrow="Debt & Government Funding"
@@ -135,7 +135,7 @@ export default function CapitalMarketPage() {
           </GlowCard>
         </div>
         <div className="maxw container-x mt-8">
-          <p className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-base)] p-5 text-xs leading-relaxed text-[var(--color-faint)]">
+          <p className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-5 text-xs leading-relaxed text-[var(--color-faint)]">
             Compliance note: paid trading advice/signals in India require SEBI (Research Analyst / Investment
             Adviser) registration. Until registered, these are presented as research &amp; tools, not advisory.
           </p>

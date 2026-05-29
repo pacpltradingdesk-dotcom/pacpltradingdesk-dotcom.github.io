@@ -49,7 +49,7 @@ export function HorizontalStory() {
   const x = useTransform(scrollYProgress, [0, 1], ["2%", "-76%"]);
 
   return (
-    <section className="relative bg-[var(--color-base)]">
+    <section className="relative bg-[var(--color-surface)]">
       <div className="maxw container-x py-[var(--space-section)] pb-12">
         <AnimatedText
           text="One company. Four moves. From feedstock to public markets."

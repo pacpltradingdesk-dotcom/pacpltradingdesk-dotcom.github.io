@@ -37,7 +37,7 @@ export function GlowCard({
       ref={ref}
       onMouseMove={onMove}
       className={cn(
-        "group relative overflow-hidden rounded-3xl border border-[var(--color-line)] bg-[var(--color-base)] p-px transition-colors hover:border-[color-mix(in_oklch,var(--color-ink)_18%,transparent)]",
+        "group relative overflow-hidden rounded-3xl border border-[var(--color-line)] bg-[var(--color-surface)] p-px transition-colors hover:border-[color-mix(in_oklch,var(--color-ink)_18%,transparent)]",
         className,
       )}
     >
@@ -46,7 +46,7 @@ export function GlowCard({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{ background: `radial-gradient(240px circle at var(--mx) var(--my), ${rim}, transparent 62%)` }}
       />
-      <div className="relative h-full rounded-[calc(1.5rem-1px)] bg-[var(--color-base)]">{children}</div>
+      <div className="relative h-full rounded-[calc(1.5rem-1px)] bg-[var(--color-surface)]">{children}</div>
       {/* in-card spotlight — on top, additive, subtle */}
       <div
         className="pointer-events-none absolute inset-px rounded-[calc(1.5rem-1px)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 mix-blend-screen"

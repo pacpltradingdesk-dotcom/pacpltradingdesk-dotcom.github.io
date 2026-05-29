@@ -34,7 +34,7 @@ export default function MarketIntelligencePage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {marketOpportunity.map((m, i) => (
               <Reveal key={m.label} index={i % 3}>
-                <div className="group relative h-full overflow-hidden rounded-3xl border border-[var(--color-line)] p-8 transition-colors hover:bg-[var(--color-base)]">
+                <div className="group relative h-full overflow-hidden rounded-3xl border border-[var(--color-line)] p-8 transition-colors hover:bg-[var(--color-surface)]">
                   <div className="font-display text-[clamp(2.4rem,4vw,3.4rem)] font-bold leading-none tracking-tight text-gradient">
                     {m.stat}
                   </div>
@@ -47,7 +47,7 @@ export default function MarketIntelligencePage() {
       </section>
 
       {/* Charts band */}
-      <section className="border-y border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-y border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x grid gap-8 lg:grid-cols-2">
           <Reveal>
             <div className="glass rounded-3xl p-8">
@@ -88,7 +88,7 @@ export default function MarketIntelligencePage() {
       </section>
 
       {/* States covered */}
-      <section className="border-t border-[var(--color-line)] bg-[var(--color-base)] py-[var(--space-section)]">
+      <section className="border-t border-[var(--color-line)] bg-[var(--color-surface)] py-[var(--space-section)]">
         <div className="maxw container-x">
           <SectionHeading
             eyebrow="Network"
@@ -98,7 +98,7 @@ export default function MarketIntelligencePage() {
           <div className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-3">
             {statesCovered.map((s, i) => (
               <Reveal key={s} index={Math.min(i % 6, 3)}>
-                <span className="rounded-full border border-[var(--color-line)] bg-[var(--color-base)] px-4 py-2 text-sm text-[var(--color-muted)] transition-colors hover:border-[var(--color-amber)] hover:text-[var(--color-ink)]">
+                <span className="rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-2 text-sm text-[var(--color-muted)] transition-colors hover:border-[var(--color-amber)] hover:text-[var(--color-ink)]">
                   {s}
                 </span>
               </Reveal>

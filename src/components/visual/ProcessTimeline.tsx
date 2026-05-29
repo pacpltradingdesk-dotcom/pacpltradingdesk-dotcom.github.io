@@ -37,7 +37,7 @@ export function ProcessTimeline({ steps }: { steps: readonly Step[] }) {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="relative"
             >
-              <span className="absolute -left-10 top-0 grid h-7 w-7 place-items-center rounded-full border border-[var(--color-line)] bg-[var(--color-base)] text-[10px] font-display text-[var(--color-amber)] sm:-left-16 sm:h-11 sm:w-11 sm:text-xs ring-glow">
+              <span className="absolute -left-10 top-0 grid h-7 w-7 place-items-center rounded-full border border-[var(--color-line)] bg-[var(--color-surface)] text-[10px] font-display text-[var(--color-amber)] sm:-left-16 sm:h-11 sm:w-11 sm:text-xs ring-glow">
                 {num}
               </span>
               <h3 className="font-display text-xl font-semibold tracking-tight sm:text-2xl">{title}</h3>

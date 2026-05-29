@@ -8,7 +8,7 @@ import { YugaMark } from "@/components/ui/YugaMark";
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-[var(--color-line)] bg-[var(--color-base)] grain">
+    <footer className="relative overflow-hidden border-t border-[var(--color-line)] bg-[var(--color-surface)] grain">
       <Marquee className="border-b border-[var(--color-line)] py-6 text-[clamp(2rem,6vw,5rem)] font-display font-semibold text-[var(--color-raised)]">
         VISION&nbsp;·&nbsp;STRATEGY&nbsp;·&nbsp;EXECUTION&nbsp;·&nbsp;
       </Marquee>
