@@ -13,6 +13,7 @@
 
   /* Text */
   --color-ink: oklch(97% 0.005 260);
+  --color-soft: oklch(85% 0.012 260);
   --color-muted: oklch(72% 0.012 260);
   --color-faint: oklch(56% 0.012 260);
 

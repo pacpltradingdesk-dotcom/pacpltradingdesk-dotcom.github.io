@@ -81,7 +81,7 @@ export function Hero() {
           variants={reveal}
           initial="hidden"
           animate="show"
-          className="mt-4 max-w-xl text-base leading-relaxed text-[var(--color-ink)]/80 sm:text-lg"
+          className="mt-4 max-w-xl text-base leading-relaxed text-[var(--color-soft)] sm:text-lg"
         >
           Bio-Bitumen PMC · AI Software · Capital Markets · Sustainable Infrastructure.
         </motion.p>
