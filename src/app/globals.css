@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/* ============================================================
+   YUGA Design System - tokens
+   Graphite-black base + dual accent (molten amber / electric cyan)
+   ============================================================ */
+@theme {
+  /* Surfaces */
+  --color-void: oklch(11% 0.005 260);
+  --color-base: oklch(14% 0.008 260);
+  --color-raised: oklch(18% 0.01 260);
+  --color-line: oklch(28% 0.012 260);
+
+  /* Text */
+  --color-ink: oklch(97% 0.005 260);
+  --color-muted: oklch(72% 0.012 260);
+  --color-faint: oklch(56% 0.012 260);
+
+  /* Accents */
+  --color-amber: oklch(74% 0.17 62);
+  --color-amber-deep: oklch(64% 0.19 45);
+  --color-cyan: oklch(78% 0.14 210);
+  --color-cyan-deep: oklch(66% 0.15 230);
+
+  /* Typography */
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid type scale */
+  --text-hero: clamp(3.25rem, 1.2rem + 9vw, 11rem);
+  --text-display: clamp(2.5rem, 1rem + 6vw, 6rem);
+  --text-h2: clamp(2rem, 1rem + 3.4vw, 3.75rem);
+  --text-h3: clamp(1.35rem, 1rem + 1.4vw, 2rem);
+
+  /* Spacing rhythm */
+  --space-section: clamp(5rem, 3rem + 8vw, 11rem);
+
+  /* Motion */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-power: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- base ---------- */
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: auto; /* Lenis handles smoothing */
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  font-feature-settings: "ss01", "cv01";
+}
+
+::selection {
+  background: color-mix(in oklch, var(--color-amber) 35%, transparent);
+  color: var(--color-ink);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-void); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-amber-deep), var(--color-cyan-deep));
+  border-radius: 99px;
+  border: 2px solid var(--color-void);
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+
+  /* Editorial italic accent — taglines & emphasis only */
+  .font-editorial {
+    font-family: var(--font-editorial), Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, var(--color-ink) 0%, var(--color-amber) 55%, var(--color-cyan) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-warm {
+    background: linear-gradient(100deg, var(--color-amber) 0%, var(--color-amber-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-cool {
+    background: linear-gradient(100deg, var(--color-cyan) 0%, var(--color-cyan-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Glass surface */
+  .glass {
+    background: color-mix(in oklch, var(--color-raised) 55%, transparent);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid color-mix(in oklch, var(--color-ink) 8%, transparent);
+  }
+
+  /* Glowing border card */
+  .ring-glow {
+    box-shadow:
+      0 0 0 1px color-mix(in oklch, var(--color-amber) 22%, transparent),
+      0 0 40px -12px color-mix(in oklch, var(--color-amber) 45%, transparent);
+  }
+  .ring-glow-cool {
+    box-shadow:
+      0 0 0 1px color-mix(in oklch, var(--color-cyan) 22%, transparent),
+      0 0 40px -12px color-mix(in oklch, var(--color-cyan) 45%, transparent);
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .container-x { padding-inline: clamp(1.25rem, 0.5rem + 3.5vw, 5rem); }
+  .maxw { max-width: 84rem; margin-inline: auto; }
+
+  .hairline { border-top: 1px solid var(--color-line); }
+}
+
+/* Hide default cursor on devices with a fine pointer (custom cursor active) */
+@media (pointer: fine) {
+  .cursor-none-fine, .cursor-none-fine * { cursor: none; }
+}
+
+/* Hero wordmark light-sweep — transform-only, one-shot on load */
+.wordmark-sweep {
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    color-mix(in oklch, var(--color-ink) 65%, transparent) 48%,
+    transparent 66%
+  );
+  transform: translateX(-130%) skewX(-12deg);
+  mix-blend-mode: overlay;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .wordmark-sweep {
+    animation: wordmark-sweep 1.4s var(--ease-expo) 1.25s 1 both;
+  }
+}
+@keyframes wordmark-sweep {
+  to {
+    transform: translateX(130%) skewX(-12deg);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
